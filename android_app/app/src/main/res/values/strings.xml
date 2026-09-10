@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">课表日历</string>
+    <string name="app_title">课表日历导入器</string>
+    <string name="app_subtitle">读取JSON课表，导入手机日历，提前1天提醒</string>
+    <string name="select_file">选择 schedule.json 文件</string>
+    <string name="import_to_calendar">导入到手机日历</string>
+    <string name="status_initial">请点击上方按钮选择JSON文件</string>
+    <string name="preview_label">课表预览</string>
+</resources>
