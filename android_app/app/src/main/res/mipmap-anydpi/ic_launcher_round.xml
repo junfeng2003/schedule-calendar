@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 低版本 Android (API<26) 的圆形 fallback 图标 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- 紫色圆形背景 -->
+    <path android:fillColor="#6200EE" android:pathData="M24,2 A22,22 0 1,1 23.99,2 Z" />
+    <!-- 白色日历主体 -->
+    <path android:fillColor="#FFFFFF" android:pathData="M14,14 L34,14 L34,34 L14,34 Z" />
+    <path android:fillColor="#6200EE" android:pathData="M14,14 L34,14 L34,18 L14,18 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M17,9 L20,9 L20,16 L17,16 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M28,9 L31,9 L31,16 L28,16 Z" />
+    <path android:strokeColor="#6200EE" android:strokeWidth="1.2" android:pathData="M14,25 L34,25" />
+    <path android:strokeColor="#6200EE" android:strokeWidth="1.2" android:pathData="M24,14 L24,34" />
+</vector>
