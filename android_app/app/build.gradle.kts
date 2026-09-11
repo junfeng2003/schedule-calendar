@@ -11,8 +11,17 @@ android {
         applicationId = "com.example.schedulecalendar"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1"
+    }
+
+    // 用 debug 签名给 release 版本签名，保证 APK 能在所有手机上安装
+    // （荣耀/华为/小米等国产 ROM 默认拒绝 unsigned APK）
+    signingConfigs {
+        getByName("debug") {
+            // 用默认 debug keystore (位于 ~/.android/debug.keystore)
+            // GitHub Actions runner 自带这个文件
+        }
     }
 
     buildTypes {
@@ -22,6 +31,8 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            // 使用 debug 签名（自签名证书），所有 Android ROM 都接受
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
     compileOptions {
