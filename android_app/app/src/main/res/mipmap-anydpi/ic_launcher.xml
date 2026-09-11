@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 低版本 Android (API<26) 的 fallback 图标
+     直接用一个完整矢量图（带背景色），保证有图标显示 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- 紫色背景 -->
+    <path android:fillColor="#6200EE" android:pathData="M0,0 L48,0 L48,48 L0,48 Z" />
+    <!-- 白色日历主体 -->
+    <path android:fillColor="#FFFFFF" android:pathData="M12,12 L36,12 L36,36 L12,36 Z" />
+    <!-- 紫色顶条 -->
+    <path android:fillColor="#6200EE" android:pathData="M12,12 L36,12 L36,17 L12,17 Z" />
+    <!-- 顶部挂钩 -->
+    <path android:fillColor="#FFFFFF" android:pathData="M16,7 L19,7 L19,15 L16,15 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M29,7 L32,7 L32,15 L29,15 Z" />
+    <!-- 网格线 -->
+    <path android:strokeColor="#6200EE" android:strokeWidth="1.2" android:pathData="M12,24 L36,24" />
+    <path android:strokeColor="#6200EE" android:strokeWidth="1.2" android:pathData="M24,12 L24,36" />
+</vector>
