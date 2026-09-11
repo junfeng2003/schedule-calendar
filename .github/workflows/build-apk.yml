@@ -31,6 +31,19 @@ jobs:
         with:
           gradle-version: '8.2'
 
+      - name: Generate debug keystore (if missing)
+        run: |
+          mkdir -p ~/.android
+          if [ ! -f ~/.android/debug.keystore ]; then
+            keytool -genkey -v -keystore ~/.android/debug.keystore \
+              -storepass android -keypass android \
+              -alias androiddebugkey -keyalg RSA -keysize 2048 -validity 10000 \
+              -dname "CN=Android Debug, O=Android, C=US"
+            echo "Created new debug.keystore"
+          else
+            echo "debug.keystore already exists"
+          fi
+
       - name: Build release APK
         working-directory: android_app
         run: gradle assembleRelease --no-daemon --stacktrace
